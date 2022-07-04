@@ -47,7 +47,7 @@ function animateImages(){
     if(windowWith < 650){
         images.forEach((image, idx) =>{
             intersectionRatioValue = ratio - (idx * 0.7);
-            setTransform(image, `translateY(${intersectionRatioValue * 30}px)`);
+            setTransform(image, `translateY(${intersectionRatioValue * 20}px)`);
         })
     }
 }
