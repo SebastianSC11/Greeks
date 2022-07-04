@@ -4,14 +4,14 @@
 }
 @font-face {
     font-family: Shandora;
-    src: url(../fonts/Shandora.ttf);
+    src: url(../../fonts/Shandora.ttf);
 }
 
 *{
     margin: 0;
     padding: 0;
     box-sizing: content-box;
-    font-family: Shandora;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 p{
@@ -133,6 +133,28 @@ body{
 
     body p{
         font-size: 1.5vh;
+    }
+
+    .banner{
+        top: -500;
+    }
+
+    .bannerTitle{
+        font-size: 3.5vh;
+    }
+}
+
+@media screen and (max-width:400px) {
+    .title{
+        font-size: 3.3vh;
+    }
+
+    body p{
+        font-size: 1.3vh;
+    }
+
+    .banner{
+        top: -500;
     }
 
     .bannerTitle{
