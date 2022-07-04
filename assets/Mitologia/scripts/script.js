@@ -36,11 +36,20 @@ function animate(){
 function animateImages(){
     let ratio = current/imageWidth;
     let intersectionRatioValue;
+    let windowWith = window.innerWidth;
 
-    images.forEach((image, idx) =>{
-        intersectionRatioValue = ratio - (idx * 0.7);
-        setTransform(image, `translateY(${intersectionRatioValue * 70}px)`);
-    })
+    if(windowWith >= 650 ){
+        images.forEach((image, idx) =>{
+            intersectionRatioValue = ratio - (idx * 0.7);
+            setTransform(image, `translateY(${intersectionRatioValue * 70}px)`);
+        })
+    }
+    if(windowWith < 650){
+        images.forEach((image, idx) =>{
+            intersectionRatioValue = ratio - (idx * 0.7);
+            setTransform(image, `translateY(${intersectionRatioValue * 30}px)`);
+        })
+    }
 }
 
 images.forEach((a, idx) =>{
