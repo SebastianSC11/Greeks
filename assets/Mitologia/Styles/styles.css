@@ -58,6 +58,7 @@ body{
     height: 30vh;
     margin: 2vh 0;
     overflow: hidden;
+    border-radius: 5px;
 }
 
 .banner{
@@ -201,6 +202,7 @@ body{
     overflow: hidden;
     margin: 0 3vw;
     background-color: antiquewhite;
+    border-radius: 10px;
 }
 
 .horizontalImg{
@@ -218,4 +220,33 @@ body{
     font-family: Ancient Geek;
     font-size: 4vw;
     color: #bb9c63;
+    text-shadow: 0px 0px 3px #000000;
+}
+
+@media screen and (max-width: 720px) {
+    .titansTitle{
+        font-size: 10vw;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .titansTitle{
+        font-size: 15vw;
+    }
+
+    .titansSlider-inner{
+        top: 12%;
+    }
+
+    .horizontalItem{
+        width: 300px;
+        height: 60vh;
+        margin: 0 1vw;
+    }
+
+    .horizontalImg{
+        left: -75px;
+        width: 450px;
+        height: 60vh;
+    }
 }
