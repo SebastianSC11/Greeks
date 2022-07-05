@@ -41,14 +41,6 @@ function init(){
     imageWidth = sliderHeight / images.length;
 }
 
-function animate(){
-    current = parseFloat(lerp(current, target, ease)).toFixed(2);
-    target = window.scrollY;
-    setTransform(titansSlider, `translateX(-${current}px)`);
-    requestAnimationFrame(animate);
-    animateImages();
-}
-
 function animateImages(){
     let ratio = current/imageWidth;
     let intersectionRatioValue;
@@ -89,10 +81,38 @@ function xClick (id, xSliderWidth, xSlider, xImgeWidth, xImages, xSection){
     })
 }
 
+function xAnimateImages (xImageWidth, xImages){
+    let ratio = current / xImageWidth;
+    let intersectionRatioValue;
+
+    xImages.forEach((img, idx) => {
+        intersectionRatioValue = ratio - (idx * 0.7);
+        setTransform(img, `translateX(${intersectionRatioValue * 70}px)`);
+    })
+}
+
+function titnasAnimate (){
+    let ratio = current / titansImageWidth;
+    let intersectionRatioValue;
+
+    titansImages.forEach((img, idx) => {
+        intersectionRatioValue = ratio - (idx * 0.7);
+        setTransform(img, `translateX(${intersectionRatioValue * 70}px)`);
+    })
+}
+
+function animate(){
+    current = parseFloat(lerp(current, target, ease)).toFixed(2);
+    target = window.scrollY;
+    setTransform(titansSlider, `translateX(-${current}px)`);
+    requestAnimationFrame(animate);
+    animateImages();
+    titnasAnimate();
+}
+
 init();
 animate();
 xClick(document.getElementById("banner1"), titansSliderWidth, titansSlider, titansImageWidth, titansImages, titansSection);
 grayHover(images, "banner");
 grayHover(titansImages, "horizontalImg");
-xAnimate(titansSlider);
 console.log(titansImageWidth);
