@@ -1,9 +1,15 @@
 let images = document.querySelectorAll('.banner');
+let titansImages = document.querySelectorAll('.horizontalImg')
 let slider = document.querySelector('.item');
+let titansSlider = document.querySelector('.titansSlider')
 let links = document.getElementById('bannerLinks');
+let titansLinks = document.getElementById('titansLinks');
 let banners = document.getElementById('banner');
+let titansSection = document.getElementById('titansSection');
 let sliderHeight;
+let titansSliderWidth;
 let imageWidth;
+let titansImageWidth;
 let current = 0;
 let target = 0;
 let ease = .05;
@@ -12,12 +18,22 @@ images.forEach((img, idx) =>{
     img.style.backgroundImage = `url(assets/Mitologia/images/images/${idx+1}.jpg)`;
 })
 
-function setTransform(el, transform){
-    el.style.transform = transform;
+titansImages.forEach((img, idx) =>{
+    img.style.backgroundImage = `url(assets/Mitologia/images/Titanes/${idx+1}.jpg)`;
+})
+
+function setTransform(el, xTransform){
+    el.style.transform = xTransform;
 }
 
 function lerp(start, end, t){
     return start * (1-t) + end * t;
+}
+
+function initX(xSliderWidth, xSlider, xImgeWidth, xImages, xSection){
+    xSliderWidth = xSlider.getBoundingClientRect().width;
+    xImgeWidth = xSliderWidth / xImages.length;
+    document.body.style.height = `${xSliderWidth - (window.innerWidth - window.innerHeight)}px`;
 }
 
 function init(){
@@ -28,9 +44,9 @@ function init(){
 function animate(){
     current = parseFloat(lerp(current, target, ease)).toFixed(2);
     target = window.scrollY;
-    setTransform(slider, `TransalateY(-${current}px)`);
-    animateImages();
+    setTransform(titansSlider, `translateX(-${current}px)`);
     requestAnimationFrame(animate);
+    animateImages();
 }
 
 function animateImages(){
@@ -51,18 +67,32 @@ function animateImages(){
         })
     }
 }
+    
+function grayHover(place, tag){
+    place.forEach((a, idx) =>{
+        a.addEventListener('mouseenter', () =>{
+            document.getElementById(tag+(idx+1)).style.animation = "bannerHover 0.5s linear 0s";
+            document.getElementById(tag+(idx+1)).style.filter = "grayscale(0%)";
+        })
 
-images.forEach((a, idx) =>{
-    a.addEventListener('mouseenter', () =>{
-        document.getElementById(`banner${idx+1}`).style.animation = "bannerHover 0.5s linear 0s";
-        document.getElementById(`banner${idx+1}`).style.filter = "grayscale(0%)";
+        a.addEventListener('mouseleave', () =>{
+            document.getElementById(tag+(idx+1)).style.animation = "bannerHoverOut 0.5s linear 0s";
+            document.getElementById(tag+(idx+1)).style.filter = "grayscale(100%)";
+        })
     })
+}
 
-    a.addEventListener('mouseleave', () =>{
-        document.getElementById(`banner${idx+1}`).style.animation = "bannerHoverOut 0.5s linear 0s";
-        document.getElementById(`banner${idx+1}`).style.filter = "grayscale(100%)";
+function xClick (id, xSliderWidth, xSlider, xImgeWidth, xImages, xSection){
+    id.addEventListener('click', () =>{
+        initX(xSliderWidth, xSlider, xImgeWidth, xImages, xSection);
+        xSection.style.visibility = 'visible';
     })
-})
+}
 
 init();
 animate();
+xClick(document.getElementById("banner1"), titansSliderWidth, titansSlider, titansImageWidth, titansImages, titansSection);
+grayHover(images, "banner");
+grayHover(titansImages, "horizontalImg");
+xAnimate(titansSlider);
+console.log(titansImageWidth);
