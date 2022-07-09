@@ -125,7 +125,7 @@ body {
 
   .homeBtn {
     font-size: 3.5vh;
-    width: 100%;
+    width: 80%;
   }
 }
 
@@ -240,7 +240,7 @@ body {
   text-shadow: 0px 0px 3px #000000;
 }
 
-.horizontalItem9 h2 {
+.mnemosine h2 {
   font-size: 3.5vw;
 }
 
@@ -323,3 +323,303 @@ body {
       width: 80%;
     }
   }
+
+/* -----------------------------------------------------------OLIMPICS------------------------------------------*/
+  .olimpicsSliderSection {
+    visibility: hidden;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 7000px;
+    height: 100vh;
+    background-color: #dad6d6;
+    padding-bottom: 5vh;
+  }
+
+  .olimpicsSlider {
+    position: absolute;
+    top: 8%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+  
+  .olimpicsSlider-inner {
+    position: absolute;
+    top: 1.5%;
+    height: 70%;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+  
+  .olimpicsHorizontalImg {
+    overflow: hidden;
+    position: absolute;
+    left: -100px;
+    width: 600px;
+    height: 80vh;
+    background-size: cover;
+    background-position: center;
+    filter: grayscale(100%);
+  }
+
+  
+  
+  #olimpicsHorizontalImg7,
+  #olimpicsHorizontalImg8,
+  #olimpicsHorizontalImg9 {
+    left: -150px;
+  }
+  
+  #olimpicsHorizontalImg10,
+  #olimpicsHorizontalImg11 {
+    left: -200px;
+  }
+  
+  #olimpicsHorizontalImg12,
+  #olimpicsHorizontalImg13,
+  #olimpicsHorizontalImg14,
+  #olimpicsHorizontalImg15 {
+    left: -300px;
+  }
+  
+  .olimpicsTitle {
+    font-family: Ancient Geek;
+    font-size: 4vw;
+    color: #bb9c63;
+    text-shadow: 0px 0px 3px #000000;
+  }
+  
+  @media screen and (max-width: 720px) {
+    .olimpicsTitle {
+      font-size: 10vw;
+    }
+  }
+  
+  @media screen and (max-width: 500px) {
+    .olimpicsTitle {
+      font-size: 15vw;
+    }
+  
+    .olimpicsSlider-inner {
+      top: 10%;
+    }
+  
+    .horizontalItem {
+      width: 300px;
+      height: 60vh;
+      margin: 0 1vw;
+    }
+  
+    .olimpicsHorizontalImg {
+      left: -250px;
+      width: 600px;
+      height: 60vh;
+    }
+  }
+
+.olimpicCard{
+    visibility: hidden;
+    position: fixed;
+    top: 0;
+    left: 0;
+    margin: 5vh 0 0 0;
+    background-color: #dad6d6;
+    overflow: hidden;
+}
+
+.olimpicsImageOnSection {
+  width: 25vw;
+  height: 40vh;
+  margin: 10vh 2vw;
+  filter: grayscale(100%);
+  background-position: center;
+  background-size: cover;
+}
+
+.olimpicIcons {
+  background-position: center;
+  background-size: cover;
+  width: 64px;
+  margin: 2vh 5vw 0 0;
+}
+
+.olimpicCard iframe{
+  width: 60%;
+  height: 60vh;
+  margin-bottom: 4vh;
+}
+
+.olimpicsBackBtn{
+        color: #bb9c63;
+        border: 3px solid #bb9c63;
+        width: 8vw;
+        font-size: 2vw;
+        align-self: center;
+        text-align: center;
+        font-family: Ancient Geek;
+        border-radius: 10px;
+        margin-bottom: 8vh;
+}
+
+.olimpicsBackBtn:hover {
+    color: #dad6d6;
+    border: 3px solid #dad6d6;
+    background-color: #bb9c63;
+  }
+
+@media screen and (max-width: 870px) {
+  
+  .olimpicCard iframe{
+    height: 60vw;
+  }
+
+  .olimpicsBackBtn {
+    font-size: 3.5vh;
+    width: 80%;
+  }
+  }
+
+/* ---------------------------------------------VARIABLES-------------------------------------- */
+.variablesSection {
+  visibility: hidden;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 5000px;
+  height: 100vh;
+  background-color: #dad6d6;
+  padding-bottom: 5vh;
+}
+
+.variablesSlider {
+  position: absolute;
+  top: 8%;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.variablesSlider-inner {
+  position: absolute;
+  top: 1.5%;
+  height: 70%;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.variablesHorizontalImg {
+  overflow: hidden;
+  position: absolute;
+  left: -100px;
+  width: 600px;
+  height: 80vh;
+  background-size: cover;
+  background-position: center;
+  filter: grayscale(100%);
+}
+
+
+
+#variablesHorizontalImg7,
+#variablesHorizontalImg8,
+#variablesHorizontalImg9 {
+  left: -150px;
+}
+
+.variablesTitle {
+  font-family: Ancient Geek;
+  font-size: 4vw;
+  color: #bb9c63;
+  text-shadow: 0px 0px 3px #000000;
+}
+
+@media screen and (max-width: 720px) {
+  .variablesTitle {
+    font-size: 10vw;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .variablesTitle {
+    font-size: 15vw;
+  }
+
+  .variablesSlider-inner {
+    top: 10%;
+  }
+
+  .variablesHorizontalImg {
+    left: -250px;
+    width: 600px;
+    height: 60vh;
+  }
+}
+
+.variablesCard{
+  visibility: hidden;
+  position: fixed;
+  top: 0;
+  left: 0;
+  margin: 5vh 0 0 0;
+  background-color: #dad6d6;
+  overflow: hidden;
+}
+
+.variablesImageOnSection {
+width: 25vw;
+height: 40vh;
+margin: 10vh 2vw;
+filter: grayscale(100%);
+background-position: center;
+background-size: cover;
+}
+
+.variablesIcons {
+background-position: center;
+background-size: cover;
+width: 64px;
+margin: 2vh 5vw 0 0;
+}
+
+.variablesCard iframe{
+width: 60%;
+height: 60vh;
+margin-bottom: 4vh;
+}
+
+.variablesBackBtn{
+      color: #bb9c63;
+      border: 3px solid #bb9c63;
+      width: 8vw;
+      font-size: 2vw;
+      align-self: center;
+      text-align: center;
+      font-family: Ancient Geek;
+      border-radius: 10px;
+      margin-bottom: 8vh;
+}
+
+.variablesBackBtn:hover {
+  color: #dad6d6;
+  border: 3px solid #dad6d6;
+  background-color: #bb9c63;
+}
+
+@media screen and (max-width: 870px) {
+
+.variablesCard iframe{
+  height: 60vw;
+}
+
+.variablesBackBtn {
+  font-size: 3.5vh;
+  width: 80%;
+}
+}
+
+/* (^._.^)ﾉ */
