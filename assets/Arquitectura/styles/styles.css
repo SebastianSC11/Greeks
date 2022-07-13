@@ -1,0 +1,527 @@
+@font-face {
+    font-family: Ancient Geek;
+    src: url(../../fonts/geek.ttf);
+    }
+@font-face {
+    font-family: Shandora;
+    src: url(../../fonts/Shandora.ttf);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: content-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    background-color: #dad6d6;
+    scroll-behavior: smooth;
+    overscroll-behavior: none;
+}
+
+p {
+    font-size: 2vh;
+}
+
+.headerImagesContainer{
+    display: flex;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+}
+
+.headerImagesContainer div{
+    position: relative;
+    filter: grayscale(95%);
+}
+
+.headerImage1{
+    width: 30vw;
+    height: 30vh;
+    top: 5vh;
+    left: 5vw;
+    background-image: url(../Images/Header/1.jpg);
+    background-position: center;
+    background-size: cover;
+    animation: headerAnimation 10s infinite alternate-reverse forwards ease-in-out;
+    
+}
+
+.headerImage2{
+    width: 46vw;
+    height: 45vh;
+    left: 20vw;
+    top: 19vh;
+    background-image: url(../Images/Header/2.jpg);
+    background-position: center;
+    background-size: cover;
+}
+
+.headerImage3{
+    width: 19vw;
+    height: 19vh;
+    left: -61vw;
+    top: 60vh;
+    background-image: url(../Images/Header/3.jpg);
+    background-position: center;
+    background-size: cover;
+}
+
+@keyframes headerAnimation {
+    0% {
+        background-image: url(../Images/Header/1.jpg);
+    }
+
+    25%{
+        background-image: url(../Images/Header/1.jpg);
+    }
+
+    50%{
+        background-image: url(../Images/Header/1.jpg);
+    }
+
+    51%{
+        background-image: url(../Images/Header/4.jpg);
+    }
+
+    75%{
+        background-image: url(../Images/Header/4.jpg);
+    }
+
+    100%{
+        background-image: url(../Images/Header/4.jpg);
+    }
+}
+
+header{
+    height: 160vh;
+    width: 100vw;
+    left: 0;
+    top: 0;
+    position: relative;
+}
+
+.stickyWrapper{
+    position: sticky;
+    left: 0;
+    top: 0;
+    height: 100vh;
+    width: 100vw;
+}
+
+.headerTitle{
+    font-size: 12vw;
+    text-align: center;
+    font-family: Ancient Geek;
+}
+
+.introductionText{
+    width: 70vw;
+    height: 70vh;
+    text-align:justify;
+    margin: auto;
+}
+
+.introductionText p{
+    font-size: 1.7vw;
+}
+
+.buildingsContainer{
+    display: flex;
+    margin-top: 10vh;
+    width: 100vw;
+}
+
+.buildingsContainerImageBanner{
+    width: 70vw;
+    height: 80vh;
+    background-position: center;
+    background-size: cover;
+    filter: grayscale(100%);
+}
+
+.animatedText{
+    opacity: 0%;
+    position: relative;
+    color: #dad6d6;
+    font-family: Ancient Geek;
+    font-size: 3vw;
+    background-color: black;
+}
+
+@keyframes grayscaleDisapear {
+    0%{
+        filter: grayscale(100%);
+    }
+
+    100%{
+        filter: grayscale(0%);
+    }
+}
+
+@keyframes grayscaleApear {
+    0%{
+        filter: grayscale(0%);
+    }
+
+    100%{
+        filter: grayscale(100%);
+    }
+}
+
+@keyframes textIn1 {
+    0%{
+        top: 5vh;
+        left: -25vw;
+        opacity: 0%;
+        color: #dad6d6;
+        background-color: black;
+    }
+    25%{
+        color: #dad6d6;
+        background-color: black;
+    }
+    50%{
+        opacity: 100%;
+    }
+    100%{
+        top: 5vh;
+        left: 25vw;
+        color: black;
+        background-color: #dad6d6;
+        opacity: 100%;
+    }
+}
+
+@keyframes textOut1 {
+    0%{
+        top: 5vh;
+        left: 25vw;
+        opacity: 100%;
+        color: black;
+        background-color: #dad6d6;
+    }
+    100%{
+        top: 5vh;
+        left: -25vw;
+        color: #dad6d6;
+        background-color: black;
+        opacity: 0%;
+    }
+}
+
+@keyframes textIn2 {
+    0%{
+        opacity: 0%;
+        color: #dad6d6;
+        background-color: black;
+    }
+    50%{
+        opacity: 100%;
+    }
+    100%{
+        color: black;
+        background-color: #dad6d6;
+        opacity: 100%;
+    }
+}
+
+@keyframes textOut2 {
+    0%{
+        opacity: 100%;
+        color: black;
+        background-color: #dad6d6;
+    }
+    100%{
+        color: #dad6d6;
+        background-color: black;
+        opacity: 0%;
+    }
+}
+
+@keyframes textIn3 {
+    0%{
+        opacity: 0%;
+        top: -5vh;
+        left: 25vw;
+        color: #dad6d6;
+        background-color: black;
+    }
+    50%{
+        opacity: 100%;
+    }
+    100%{
+        top: -5vh;
+        left: -25vw;
+        color: black;
+        background-color: #dad6d6;
+        opacity: 100%;
+    }
+}
+
+@keyframes textOut3 {
+    0%{
+        opacity: 100%;
+        top: -5vh;
+        left: -25vw;
+        color: black;
+        background-color: #dad6d6;
+    }
+    100%{
+        top: -5vh;
+        left: 25vw;
+        color: #dad6d6;
+        background-color: black;
+        opacity: 0%;
+    }
+}
+
+.typesOfBuildingsContainer{
+    display: flex;
+}
+
+.buildingsContainerTitle{
+    font-size: 2vw;
+    font-family: Ancient Geek;
+}
+
+.textContainer{
+    width: 70vw;
+}
+
+.buildingsContainerBtn{
+    margin-top: 3vh;
+    font-size: 1.3vw;
+    text-decoration: none
+}
+
+.buildingsContainerBtn:hover{
+    color: black;
+    text-decoration: underline;
+}
+
+.typesOfBuildingsOnPage{
+    display: none;
+}
+
+.bigThingContainer{
+    position: relative;
+}
+
+.buildingHeaderImagesContainer{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+}
+
+.frontOfTextImages{
+    position: absolute;
+    background-position: center;
+    background-size: cover;
+    filter:grayscale(100%);
+}
+
+.buildingHeaderImage1{
+    width: 35vw;
+    height: 35vh;
+    left: 4vw;
+    top: 8vh;
+}
+
+.buildingHeaderImage2{
+    width: 21vw;
+    height: 12vh;
+    left: 35vw;
+    top: 51vh;
+}
+
+.buildingHeaderImage3{
+    width: 13vw;
+    height: 45vh;
+    left: 69vw;
+    top: 32vh;
+}
+
+.buildingsOnImageContainer{
+    margin-top: 30vh;
+}
+
+.typesOfBuildingsOnImage{
+    width: 70vw;
+    height: 70vh;
+    background-position: center;
+    background-size: cover;
+    filter: grayscale(100%);
+}
+
+.textTypesOfBuildingsOnImage{
+    opacity: 0%;
+    color: #dad6d6;
+    text-shadow: 0px 0px 7px #000000;
+    font-size: 1.5vw;
+}
+
+.typesOfBuildingsBtn{
+    font-size: 1.3vw;
+    text-decoration: none;
+}
+
+.typesOfBuildingsBtn:hover{
+    text-decoration: underline;
+    color: #000000;
+}
+
+
+@keyframes textOnImageOpacityIn {
+    0%{
+        opacity: 0%;
+    }
+
+    100%{
+        opacity: 100%;
+    }
+}
+
+@keyframes textOnImageOpacityOut {
+    0%{
+        opacity: 100%;
+    }
+
+    100%{
+        opacity: 0%;
+    }
+}
+
+
+/* -------------------------------------------------------Partenon------------------------------------------- */
+.partenonOnImage{
+    display: none;
+}
+
+.onPageImages{
+    background-size: cover;
+    background-position: center;
+    filter: grayscale(100%);
+}
+
+.imageOnFooter{
+    width: 20vw;
+    height: 60vh;
+    margin: 2.5vw;
+}
+
+.imageOnFooterLower{
+    width: 70vw;
+    height: 20vh;
+    margin: auto;
+}
+
+.backBtnContainer{
+    margin: 5vh 0;
+}
+
+@keyframes onScroll1 {
+    0%{
+        top: 8vh;
+        left: 4vw;
+    }
+
+    100%{
+        top: 8vh;
+        left: -40vw;
+    }
+}
+
+@keyframes onScroll2 {
+    0%{
+        left: 35vw;
+        top: 51vh;
+    }
+
+    100%{
+        left: -35vw;
+        top: 51vh;
+    }
+}
+
+@keyframes onScroll3 {
+    0%{
+        left: 79vw;
+        top: 32vh;
+    }
+
+    100%{
+        left: 139vw;
+        top: 32vh;
+    }
+}
+
+.scene{
+    margin-top: 15vh;
+}
+
+.acropolisOnImage{
+    display: none;
+}
+
+.erecteionOnImage{
+    display: none;
+}
+
+.teatroDeDionisioOnImage{
+    display: none;
+}
+
+.temploDeSegestaOnImage{
+    display: none;
+}
+
+.footer{
+    display: flex;
+    width: 100vw;
+    height: 20vh;
+    padding-bottom: 5vh;
+}
+
+@media (max-width: 770px) {
+    .introductionText p{
+        font-size: 2.7vw;
+    }
+
+    .buildingsContainerTitle{
+        font-size: 4vw;
+    }
+
+    .typesOfBuildingsBtn{
+        font-size: 2.5vw;
+    }
+
+    .textTypesOfBuildingsOnImage{
+        font-size: 2.3vw;
+    }
+}
+
+@media (max-width: 425px) {
+    .introductionText p{
+        font-size: 3.7vw;
+    }
+
+    .buildingsContainerTitle{
+        font-size: 6vw;
+        text-align: center;
+    }
+
+    .typesOfBuildingsBtn{
+        font-size: 4vw;
+        text-align: center;
+    }
+
+    .textTypesOfBuildingsOnImage{
+        font-size: 3.8vw;
+    }
+}
