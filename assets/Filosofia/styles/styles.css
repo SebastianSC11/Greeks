@@ -1,0 +1,650 @@
+/*Fuentes*/
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&family=Teko:wght@300;400;500;600;700&display=swap');
+
+/* declarando variables */
+:root{
+    /* colores del sistema */
+    --black: #232020;
+    --white: #f2f2f2;
+    --gray: #b1b1b1;
+
+    /* otros colores */
+    /* rosados */
+    --light-pink: #d2a4a1;
+    --dark-pink: #a67171;
+    --blueBG: #04303f; 
+
+    /* morados */
+    --light-purple: #cba1d2;
+    --dark-purple: #9f71a6;
+    --blackeyBG: #1f1f1f;
+
+
+    /* azules */
+    --light-blue: #a1c8d2;
+    --dark-blue: #719ca6;
+    
+
+    /* verdes */
+    --light-green: #a5d2a1;
+    --dark-green: #78a671;
+    --blackBG: #4a4a4a;
+
+    /* cafes */
+    --light-brown: #d1bb96;
+    --dark-brown: #7a614c;
+    --gray-BG: #1f1914;
+
+    /* otras vairables */
+    --body-family: "Teko", sans-serif;
+    --header-family: "Orbitron", sans-serif;
+
+    /* fuentes */
+    --one-size: 3.2vw;
+    --two-size: 2vw;
+    --three-size: 1.5vw;
+    --four-size: 1.2vw;
+    --body-size: 0.8vw;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    display: block;
+    font-family: var(--body-family);
+    font-size: var(--body-size);
+}
+
+
+/* Estilos generalos de los links o elementos a */
+a{
+    text-decoration: none;
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+    width: auto;
+    height: auto;
+}
+
+ul{
+    list-style: none;
+}
+
+header{
+    position: relative;
+    height: 100vh;
+    width: 100vw;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    overflow: hidden;
+}
+
+
+/* color de la interfaz */
+.blacked{
+    color: var(--black);
+}
+
+.grayed{
+    color: var(--gray);
+}
+
+
+/* dandole estilo a las secciones */
+.left,
+.rigth{
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 2.1vw 8vw;
+    z-index: 3;
+}
+
+
+/* dandole estilo a la seccion izquierda */
+.left{
+    align-items: flex-start;
+}
+
+.left nav{
+    display: flex;
+    flex-direction: column;
+}
+
+.left nav h1{
+    font-size: var(--one-size);
+    font-family: var(--header-family)
+}
+
+.left nav h1 a{
+    text-transform: lowercase;
+}
+
+.left nav ul{
+    padding-left: 0;
+    margin-top: 6.9vh;
+}
+
+.left nav ul li a{
+    font-weight: 500;
+    letter-spacing: 1.5px;
+    position: relative;
+
+}
+
+.left nav ul li a::before{
+    content: '';
+    position: absolute;
+    top: 45%;
+    left: 0%;
+    width: 0%;
+    height: 1px;
+    background-color: var(--black);
+    transition: 0.7s all;
+}
+
+.left nav ul li a.whitey::before{
+    background-color: var(--white);
+}
+
+.left nav ul li a:hover::before{
+    width: 100%;
+}
+
+.left-footer h2{
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    font-weight: 400;
+    font-size: var(--two-size);
+    line-height: 80%;
+}
+
+.left-footer p{
+    font-size: var(--four-size);
+}
+
+/* dandole estilo a la seccion carrousel */
+.carrousel-container{
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+
+.circles, .circle{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.circles{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.circle{
+    border-radius: 100%;
+    transition: 0.7s all;
+
+}
+
+.circle.active{
+    width: 32vw;
+    height: 32vw;
+}
+
+.circle.minimized{
+    width: 1.6vw;
+    height: 1.6vw;
+    opacity: 0;
+}
+
+.circle.larged{
+    width: 117vw;
+    height: 117vw;
+}
+
+.ghost-circle.larged{
+    background-color: var(--blueBG);
+}
+
+.pinked-circle{
+    background: linear-gradient(135deg, var(--light-pink), var(--dark-pink))
+}
+
+.pinked-circle.larged{
+    background: var(--blackeyBG)
+}
+
+.purpled-circle{
+    background: linear-gradient(135deg, var(--light-purple), var(--dark-purple))
+}
+
+.purpled-circle.larged{
+    background: var(--white)
+}
+
+.blued-circle{
+    background: linear-gradient(135deg, var(--light-blue), var(--dark-blue))
+}
+
+.blued-circle.larged{
+    background: var(--blackBG)
+}
+
+.greened-circle{
+    background: linear-gradient(135deg, var(--light-green), var(--dark-green))
+}
+
+.greened-circle.larged{
+    background: var(--gray-BG)
+}
+
+.golden-circle{
+    background: linear-gradient(135deg, var(--light-brown), var(--dark-brown))
+}
+
+/* .golden-circle.larged{
+    background: var(--gray-BG)
+} */
+
+.images{
+    position: absolute;
+    bottom: 0%;
+    left: 50%;
+    transform: translate(-50%, 0%);
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    height: 100%;
+    width: auto;
+    z-index: 2;
+    transition: 0.7s all;
+}
+
+.image{
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    margin: 0px 22vw;
+    transition: 0.7s all;
+}
+
+.image img{
+    object-fit: cover;
+}
+
+.image.active{
+    width: 32vw;
+    height: 80%;
+}
+
+.image.active img, .image.minimized img{
+    width: 77%;
+    height: 77%;
+}
+
+.image.minimized{
+    width: 10.6vw;
+    height: 10.6vw;
+}
+
+.backgroundImageClass{
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+/* dandole estilo a la seccion derecha */
+.rigth{
+    align-items: flex-end;
+
+}
+
+.rigth a{
+    position: relative;
+    font-weight: 500;
+}
+
+.rigth a::before{
+    content: '';
+    position: absolute;
+    top: 45%;
+    left: 0%;
+    width: 0%;
+    height: 1px;
+    background-color: var(--black);
+    transition: 0.7s all;
+}
+
+.rigth a:hover::before{
+    width: 55%;
+}
+
+.rigth a:hover{
+    color: var(--black);
+}
+
+.link-circle{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 2.12vw;
+    height: 2.12vw;
+    border-radius: 100%;
+    margin-left: 10px;
+    font-size: var(--four-size);
+    color: var(--white);
+}
+
+.blue-circle{
+    background-color: var(--dark-blue);
+}
+
+.black-circle{
+    background-color: var(--black);
+}
+
+.slider-range{
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    width: auto;
+    position: relative;
+
+
+}
+
+.slider-range::after{
+    content: '';
+    position: absolute;
+    top: 49%;
+    left: 82%;
+    transform: translate(-50%,-50%);
+    width: 2.12vw;
+    height: 2.12vw;
+    border: 3px solid var(--gray);
+    border-left: 0px;
+    border-right: 0px;
+}
+
+.nbr{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: auto;
+    width: auto;
+    margin: 10px 0px;
+    cursor: pointer;
+    user-select: none;
+    color: var(--gray);
+    font-size: var(--body-size);
+    transition: 0.7s all;
+}
+
+.nbr:nth-of-type(1){
+    margin-top: 0px;
+}
+
+.nbr:nth-of-type(5){
+    margin-bottom: 0px;
+}
+
+.nbr.blacked{
+    color: var(--black);
+}
+
+.nbr.active{
+    font-size: var(--four-size);
+    color: var(--black);
+}
+
+.nbr.invisibles{
+    opacity: 0;
+    user-select: none;
+    pointer-events: none;
+
+}
+
+/* mouse */
+.cursor
+{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  position: absolute;
+
+  transform: translate(-50%,-50%);
+
+  height: 1.7vw;
+  width: 1.7vw;
+
+  border-radius: 100%;
+
+  border: 1px solid var(--black);
+
+  z-index: 5;
+
+  pointer-events: none;
+}
+
+.cursor::before
+{
+  content: '';
+
+  position: absolute;
+
+  width: 2px;
+  height: 2px;
+
+  background-color: var(--black);
+
+  border-radius: 100px;
+}
+
+.cursor::after
+{
+  content: '';
+
+  position: absolute;
+
+  width: 3.4vw;
+  height: 3.4vw;
+
+  border: 1px dotted var(--black);
+
+  border-radius: 100px;
+}
+
+.cursor.whitey
+{
+    border: 1px solid var(--white);
+}
+
+.cursor.whitey::before
+{
+    background-color: var(--white);
+}
+
+.cursor.whitey::after
+{
+    border: 1px dotted var(--white);
+}
+
+/* filosofos */
+ .filosofos{
+    display: none;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+ }
+
+ .filosofo{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: column;
+    margin: 10vh 0;
+ }
+
+ .filosofo h2{
+    font-size: var(--two-size);
+ }
+
+ .filosofo p{
+    width: 60%;
+    font-size: var(--four-size);
+ }
+
+ .imageContainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+ }
+
+ .filosofosOnPage{
+    margin: 2vw;
+    width: 20vw;
+    height: 30vw;
+    background-size: cover;
+    background-position: center;
+    filter: grayscale(100%);
+ }
+
+ .backBtn{
+    font-size: var(--two-size);
+    position: relative;
+ }
+
+ .backBtn::before{
+    content: '';
+    position: absolute;
+    top: 45%;
+    left: 0%;
+    width: 0%;
+    height: 5px;
+    background-color: var(--black);
+    transition: 0.7s all;
+}
+
+.backBtn:hover::before{
+    width: 100%;
+}
+
+.backBtn:hover{
+    color: var(--black);
+}
+
+/* Corientes filosoficas */
+
+.corrientes{
+    display: none;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100%;
+    flex-direction: column;
+}
+
+.escuelas{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: column;
+    margin: 5vh 0;
+}
+
+.escuelas h2{
+    font-size: var(--two-size);
+}
+
+.escuelas p{
+    width: 60%;
+    font-size: var(--four-size);
+}
+
+.escuelasOnImage{
+    width: 60%;
+    height: 20vh;
+    background-position: center;
+    background-size: cover;
+    filter: grayscale(100%);
+}
+
+@media (max-width: 1440px) {
+    :root{
+        --one-size: 4.2vw;
+        --two-size: 3vw;
+        --three-size: 2.5vw;
+        --four-size: 2.2vw;
+        --body-size: 1.8vw;
+    }
+
+    .circle.active{
+        width: 45vw;
+        height: 45vw;
+    }
+    
+    .circle.larged{
+        width: 130vw;
+        height: 130vw;
+    }
+
+    .slider-range::after{
+        width: 3.12vw;
+        height: 3.12vw;
+        border: 3px solid var(--gray);
+        border-left: 0px;
+        border-right: 0px;
+    }
+
+    .image.active{
+        width: 60vw;
+        height: 80%;
+    }
+}
+
+@media (max-width: 550px) {
+    :root{
+        --one-size: 6.2vw;
+        --two-size: 5vw;
+        --three-size: 4.5vw;
+        --four-size: 4.2vw;
+        --body-size: 3.8vw;
+    }
+
+    .circle.active{
+        width: 120vw;
+        height: 120vw;
+    }
+    
+    .circle.larged{
+        width: 320vw;
+        height: 320vw;
+    }
+
+    .slider-range::after{
+        width: 5.12vw;
+        height: 6.12vw;
+        border: 3px solid var(--gray);
+        border-left: 0px;
+        border-right: 0px;
+    }
+
+    .image.active{
+        width: 120vw;
+        height: 80%;
+    }
+}
