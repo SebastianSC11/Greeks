@@ -26,30 +26,31 @@ function carrouselController(){
                 // trasladando el slider hacia arriba
                 if(window.innerWidth > screenSizes[1] ){
                     sliderNbr.forEach(element => {
-                        element.style.transform = 'translateY(90px)';
+                        element.style.transform = 'translateY(4.5vw)';
                     });
     
                     filosofo.forEach(element => {
                         element.style.transform= 'translateX(115vw)';
                     });
                 }
-                if(window.innerWidth < screenSizes[1] && window.innerWidth > screenSizes[2]){
+                if(window.innerWidth < screenSizes[0] && window.innerWidth >= screenSizes[1]){
                     sliderNbr.forEach(element => {
-                        element.style.transform = 'translateY(84px)';
+                        element.style.transform = 'translateY(9vw)';
                     });
     
                     filosofo.forEach(element => {
                         element.style.transform= 'translateX(115vw)';
                     });
                 }
-                if(window.innerWidth < screenSizes[1] && window.innerWidth < screenSizes[2] ){
+                if(window.innerWidth < screenSizes[0] && window.innerWidth < screenSizes[1] ){
                     sliderNbr.forEach(element => {
-                        element.style.transform = 'translateY(78px)';
+                        element.style.transform = 'translateY(22.5vw)';
                     });
     
                     filosofo.forEach(element => {
                         element.style.transform= 'translateX(115vw)';
                     });
+                    console.log("minus")
                 }
                 //configurando los circulos para la transicion
                 for(let i = 0; i < circle.length; i++){
@@ -92,25 +93,25 @@ function carrouselController(){
                 // trasladando el slider hacia arriba
                 if(window.innerWidth > screenSizes[1] ){
                     sliderNbr.forEach(element => {
-                        element.style.transform = 'translateY(45px)';
+                        element.style.transform = 'translateY(2.25vw)';
                     });
     
                     filosofo.forEach(element => {
                         element.style.transform= 'translateX(57vw)';
                     });
                 }
-                if(window.innerWidth < screenSizes[1] && window.innerWidth > screenSizes[2]){
+                if(window.innerWidth < screenSizes[0] && window.innerWidth >= screenSizes[1]){
                     sliderNbr.forEach(element => {
-                        element.style.transform = 'translateY(42px)';
+                        element.style.transform = 'translateY(4.5vw)';
                     });
     
                     filosofo.forEach(element => {
                         element.style.transform= 'translateX(57vw)';
                     });
                 }
-                if(window.innerWidth < screenSizes[1] && window.innerWidth < screenSizes[2] ){
+                if(window.innerWidth < screenSizes[0] && window.innerWidth < screenSizes[1] ){
                     sliderNbr.forEach(element => {
-                        element.style.transform = 'translateY(38px)';
+                        element.style.transform = 'translateY(11.5vw)';
                     });
     
                     filosofo.forEach(element => {
@@ -207,25 +208,25 @@ function carrouselController(){
                 // trasladando el slider hacia arriba
                 if(window.innerWidth > screenSizes[1] ){
                     sliderNbr.forEach(element => {
-                        element.style.transform = 'translateY(-45px)';
+                        element.style.transform = 'translateY(-2.25vw)';
                     });
     
                     filosofo.forEach(element => {
                         element.style.transform= 'translateX(-57vw)';
                     });
                 }
-                if(window.innerWidth < screenSizes[1] && window.innerWidth > screenSizes[2]){
+                if(window.innerWidth < screenSizes[0] && window.innerWidth >= screenSizes[1]){
                     sliderNbr.forEach(element => {
-                        element.style.transform = 'translateY(-42px)';
+                        element.style.transform = 'translateY(-4.5vw)';
                     });
     
                     filosofo.forEach(element => {
                         element.style.transform= 'translateX(-57vw)';
                     });
                 }
-                if(window.innerWidth < screenSizes[1] && window.innerWidth < screenSizes[2] ){
+                if(window.innerWidth < screenSizes[0] && window.innerWidth < screenSizes[1] ){
                     sliderNbr.forEach(element => {
-                        element.style.transform = 'translateY(-38px)';
+                        element.style.transform = 'translateY(-11.5vw)';
                     });
     
                     filosofo.forEach(element => {
@@ -273,25 +274,25 @@ function carrouselController(){
                 // trasladando el slider hacia arriba
                 if(window.innerWidth > screenSizes[1] ){
                     sliderNbr.forEach(element => {
-                        element.style.transform = 'translateY(-90px)';
+                        element.style.transform = 'translateY(-4.5vw)';
                     });
     
                     filosofo.forEach(element => {
                         element.style.transform= 'translateX(-115vw)';
                     });
                 }
-                if(window.innerWidth < screenSizes[1] && window.innerWidth > screenSizes[2]){
+                if(window.innerWidth < screenSizes[0] && window.innerWidth >= screenSizes[1]){
                     sliderNbr.forEach(element => {
-                        element.style.transform = 'translateY(-84px)';
+                        element.style.transform = 'translateY(-9vw)';
                     });
     
                     filosofo.forEach(element => {
                         element.style.transform= 'translateX(-115vw)';
                     });
                 }
-                if(window.innerWidth < screenSizes[1] && window.innerWidth < screenSizes[2] ){
+                if(window.innerWidth < screenSizes[0] && window.innerWidth < screenSizes[1] ){
                     sliderNbr.forEach(element => {
-                        element.style.transform = 'translateY(-78px)';
+                        element.style.transform = 'translateY(-22.5vw)';
                     });
     
                     filosofo.forEach(element => {
@@ -367,9 +368,6 @@ function carrouselController(){
 
                 filosofo[j].classList.remove('active');
                 filosofo[j].classList.add('minimized')
-                console.log(j)
-                console.log('sigo vivo')
-
             }
             // botones antes del activo
             for (let k = 4; k != i; k--){
@@ -378,8 +376,6 @@ function carrouselController(){
 
                 filosofo[k].classList.remove('active');
                 filosofo[k].classList.add('minimized')
-                console.log(k)
-                console.log('sigo vivo???')
             }
         })
     }

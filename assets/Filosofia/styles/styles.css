@@ -366,7 +366,7 @@ header{
 
 }
 
-.slider-range::after{
+/* .slider-range::after{
     content: '';
     position: absolute;
     top: 49%;
@@ -377,7 +377,7 @@ header{
     border: 3px solid var(--gray);
     border-left: 0px;
     border-right: 0px;
-}
+} */
 
 .nbr{
     display: flex;
@@ -408,6 +408,9 @@ header{
 .nbr.active{
     font-size: var(--four-size);
     color: var(--black);
+    border-top: 3px solid var(--gray);
+    border-bottom: 3px solid var(--gray);
+    width: 2vw;
 }
 
 .nbr.invisibles{
