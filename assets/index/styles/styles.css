@@ -1,0 +1,308 @@
+@font-face {
+    font-family: Ancient Geek;
+    src: url(../../fonts/geek.ttf);
+}
+@font-face {
+    font-family: Shandora;
+    src: url(../../fonts/Shandora.ttf);
+}
+@font-face {
+    font-family: Butler;
+    src: url(../../fonts/Butler_Black.otf);
+}
+
+body{
+    background-color: #CAE6E9;
+}
+
+body header{
+    background-image: url(../images/background.jpg);
+    background-attachment: fixed;
+}
+
+body header .cover-container{
+    height:100vh;
+    width: 100%;
+}
+
+body header .cover-container h1{
+    font-family: Ancient Geek;
+}
+
+body .introduction{
+    width: 100%;
+    font-family: Shandora;
+}
+
+.introductionh4{
+    font-family: Ancient Geek;
+    color: #936E4E;
+    font-size: 3vw;;
+}
+
+.introductionP{
+    padding: 1vw 3vw;
+    font-size: 1.5vw;
+}
+
+.horizontal-section{
+    padding: 0;
+}
+
+.sticky-wrapper{
+    position: sticky;
+    top: 0;
+    width: 100%;
+    overflow: hidden;
+    margin: 0;
+    padding: 2.5vh 0 0 0;
+}
+
+.element-wrapper{
+    width: 100%;
+    max-width: max-content;
+    display: flex;
+    position: relative;
+}
+
+.elements{
+    width: 100%;
+    max-width: 1920px;
+    flex-shrink: 0;
+    margin: 0 1vw;
+}
+
+.thumb{
+    height: 95vh;
+    width: 50vw;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 0vw;
+    transition: 0.3s all;
+    text-shadow: 0px 0px 2px #000;
+}
+
+.thumb:hover{
+    transition: 0.3s all;
+    font-size: 1.5vw;
+    filter: grayscale(100%);
+}
+
+.thumbLink{
+    color: #CAE6E9;
+    text-decoration: none;
+    text-decoration:line-through;
+}
+
+.thumbLink:hover{
+    text-decoration: none;
+    transition: 0.3s all;
+    text-shadow: 0px 0px 2px #fff;
+}
+
+.description{
+    font-family: Shandora;
+    color: #CAE6E9;
+    flex-shrink: 2.5;
+    margin: 0 1vw;
+    font-size: 1.5vw;
+    width: 20vw;
+}
+
+.area{
+    font-family: Ancient Geek;
+    color: #CAE6E9;
+    margin: 0 1vw;
+    font-size: 2vw;
+}
+
+.int-img{
+    flex-shrink: 0;
+}
+
+.description1{
+    color: #936E4E;
+}
+
+.area1{
+    color: #936E4E;
+}
+
+@keyframes bgColorChange {
+    0% {
+        background-color: #CAE6E9;
+    }
+
+    100% {
+        background-color: #A48E7F;
+    }
+}
+
+@keyframes fontColorChange {
+    0%{
+        color: #936E4E;
+    }
+
+    100%{
+        color: #CAE6E9;
+    }
+}
+
+.final-section{
+    opacity: 0%;
+}
+
+.quoteContainer{
+    padding: 13vh 0;
+}
+
+.length-container{
+    width: 100%;
+}
+
+.greek-quote{
+    font-family: Ancient Geek;
+
+}
+
+.es-quote{
+    opacity: 0%;
+    font-family: Shandora;
+}
+
+.author-es{
+    opacity: 0%;
+    font-family: Shandora;
+}
+
+.author-greek{
+    font-family: Ancient Geek;
+}
+
+/**Transicion de fonod despues del indice**/
+@keyframes transition1 {
+    0%{
+        background-color: #A48E7F;
+    }
+
+    100%{
+        background-color: #000000;
+    }
+}
+
+@keyframes inQuote {
+    0%{
+        opacity: 0%;
+    }
+
+    25%{
+        opacity: 25%;
+    }
+
+    50%{
+        opacity: 50%;
+    }
+
+    75%{
+        opacity: 75%;
+    }
+
+    100%{
+        opacity: 100%;
+    }
+}
+
+@keyframes outQuote {
+    0%{
+        transform: translateX(-0%);
+    }
+
+    25%{
+        transform: translateX(-25%);
+    }
+
+    50%{
+        transform: translateX(-50%);
+    }
+
+    75%{
+        transform: translateX(-75%);
+    }
+
+    100%{
+        transform: translateX(-100%);
+    }
+}
+
+@media screen and (max-width: 1250px) {
+    .int-img{
+        max-width: 400px;
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    .elements{
+        flex-direction: column;
+    }
+
+    .thumb{
+        height: 60vw;
+    }
+
+    .description{
+        font-size: 4vw;
+        margin-top: 14vw;
+        text-align: center;
+
+    }
+    
+    .area{
+        margin-bottom: 14vw;
+        font-size: 5vw;
+    }
+
+    .final-section{
+        padding: 40vw 10vw;
+    }
+}
+
+@media screen and (max-width: 1000px) and (max-height: 1000px) {
+    .elements{
+        flex-direction: column;
+    }
+
+    .thumb{
+        height: 60vw;
+    }
+
+    .description{
+        font-size: 4vw;
+        margin-top: 14vw;
+        text-align: center;
+
+    }
+    
+    .area{
+        margin-bottom: 14vw;
+        font-size: 5vw;
+    }
+}
+
+@media screen and (max-width: 720px) {
+    .int-img{
+        width: 40vw;
+        margin-left: 5vw;
+    }
+
+    .introductionh4{
+        font-size: 5vw;
+    }
+
+    .introductionP{
+        font-size: 3vw;
+    }
+}
