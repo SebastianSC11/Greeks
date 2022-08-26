@@ -47,6 +47,7 @@ body .introduction{
 
 .horizontal-section{
     padding: 0;
+    height: 240vw;
 }
 
 .sticky-wrapper{
@@ -59,7 +60,8 @@ body .introduction{
 }
 
 .element-wrapper{
-    width: 100%;
+    padding: 0 5vw;
+    width: 100vw;
     max-width: max-content;
     display: flex;
     position: relative;
@@ -244,25 +246,30 @@ body .introduction{
     }
 }
 
-@media screen and (max-width: 1000px) {
+@media screen and (max-width: 1024px) {
     .elements{
         flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+        height: 90vh;
     }
 
     .thumb{
-        height: 60vw;
+        height: 20vh;
     }
 
     .description{
-        font-size: 4vw;
-        margin-top: 14vw;
+        font-size: 2vw;
         text-align: center;
 
     }
+
+    .thumb:hover{
+        font-size: 2vw;
+    }
     
     .area{
-        margin-bottom: 14vw;
-        font-size: 5vw;
+        font-size: 4vw;
     }
 
     .final-section{
@@ -270,29 +277,22 @@ body .introduction{
     }
 }
 
-@media screen and (max-width: 1000px) and (max-height: 1000px) {
-    .elements{
-        flex-direction: column;
-    }
-
-    .thumb{
-        height: 60vw;
+@media screen and (max-width: 768px) {
+    .horizontal-section{
+        height: 300vw;
     }
 
     .description{
-        font-size: 4vw;
-        margin-top: 14vw;
+        font-size: 5vw;
         text-align: center;
+        width: 80%;
 
     }
     
     .area{
-        margin-bottom: 14vw;
-        font-size: 5vw;
+        font-size: 6vw;
     }
-}
 
-@media screen and (max-width: 720px) {
     .int-img{
         width: 40vw;
         margin-left: 5vw;
@@ -304,5 +304,27 @@ body .introduction{
 
     .introductionP{
         font-size: 3vw;
+    }
+
+    .thumb:hover{
+        font-size: 4vw;
+    }
+}
+
+@media screen and (max-width: 425px) {
+    .horizontal-section{
+        height: 400vw;
+    }
+}
+
+@media screen and (max-width: 375px) {
+    .horizontal-section{
+        height: 420vw;
+    }
+}
+
+@media screen and (max-width: 340px) {
+    .horizontal-section{
+        height: 430vw;
     }
 }

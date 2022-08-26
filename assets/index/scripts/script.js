@@ -1,28 +1,22 @@
 document.addEventListener('DOMContentLoaded', function(){
         var windowWith = window.innerWidth;
-        var horizontalLength = document.querySelector(".element-wrapper").scrollWidth;
+        var horizontalLength = document.querySelector("#element-wrapper").scrollWidth;
         var horizontalLength2 = document.querySelector(".length-container").scrollWidth;
         var distFromTop = document.querySelector(".horizontal-section").offsetTop;
         var distFromTop2 = document.querySelector(".final-section").offsetTop;
         var scrollDistance = distFromTop + horizontalLength - windowWith;
         var scrollDistance2 = distFromTop2 + horizontalLength2 + scrollDistance - (windowWith/1.5);
-        var quote = document.getElementById("quote")
+        var quote = document.getElementById("quote");
 
-        document.querySelector(".horizontal-section").style.height = horizontalLength + "px";
-        console.log(distFromTop2);
 
         window.onscroll = function(){
-            var scrollTop = window.pageYOffset; 
+            var scrollTop = window.scrollY;
             if(scrollTop >= distFromTop && scrollTop <= scrollDistance){
                 document.querySelector(".element-wrapper").style.transform = "translateX(-"+(scrollTop - distFromTop)+"px)";
                 document.body.style.animation = "bgColorChange 1s linear";
-                document.body.style.backgroundColor = "#A48E7F"
-                document.querySelector(".area1").style.animation = "fontColorChange 1s linear";
-                document.querySelector(".description1").style.animation = "fontColorChange 1s linear";
-                document.querySelector(".area1").style.color = "#CAE6E9";
-                document.querySelector(".description1").style.color = "#CAE6E9";
-                console.log(scrollTop);
-                console.log(scrollDistance2);
+                document.body.style.backgroundColor = "#A48E7F";
+                console.log(scrollDistance);
+                console.log(document.querySelector(".final-section").getBoundingClientRect().top);
             }
             if(scrollTop >= scrollDistance2-distFromTop2 && scrollTop <= scrollDistance2){
                 document.body.style.backgroundColor="black";
